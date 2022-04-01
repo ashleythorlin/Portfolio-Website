@@ -1,90 +1,163 @@
+/* 
+    COLOR PALETTE
+
+    PURPLES
+    
+    BROWN/PURPLE
+    --purple: #592C56;
+    --white: #ffffff;
+    --beige: #F2CBBD;
+    --peach: #BF7C63;
+    --mbrown: #592C22;
+    --dbrown: #261511;
+*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+:root {
+    --lav: #8F8EBF;
+    --section: #4F4D8C;
+    --background: #1b153f;
+    --dpurple: #332e57;
+    --nav: #3a587c;
+    --footer: #18283b;
+    --black: #262626;
+    --font: #ffffff;
+}
+
+
+
+/* GLOBAL */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1b153f;
-    color: #ddd;
-    padding: 5em;
-}
-
-.boxes {
+    background: var(--background);
+    color: var(--font);
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 3.125em 0;
-    position: absolute;
 }
 
-.box{
-    max-width: 60%;
-    margin: 6.25em 0;
-    background-color: #474073;
-    align-items: center;
-    box-shadow: 3px 3px 15px 1px #171717;
-    border-radius: 15px;
-    min-height: 40.625em;
-    justify-items: center;
-
+/*  NAV BAR */
+.nav-bar {
+    background: var(--nav);
+    min-height: 5em;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-.content-left, .content-right{
+#name {
+    float: left;
+    font-size: 32px;
+    transform: translateY(35%);
+    padding: 0 0.5em;
+}
+
+.nav-bar ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 3.5em;
-    padding: 7em 0;
-    
+    padding: 1em 0.5em;
+    flex-wrap: wrap;
+    float: right;
 }
 
-.content-right{
+.nav-bar a {
+    color: var(--font);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    font-weight: bold;
+}
+
+/*  JUMPS  */
+.jump {
+    height: 10em;
+}
+
+
+/* AUDIO CONTROLS - https://blog.shahednasser.com/how-to-style-an-audio-element/ */
+
+/*  SECTIONS */
+section {
+    background: var(--section);
+    border-radius: 15px;
+    margin: 0 15em; 
+}
+
+section .content-left, section .content-right {
+    display: flex;
+    flex-basis: row nowrap;
+    padding: 5em;
+    justify-items: center;
+    align-items: center;
+}
+
+section .content-right {
     flex-direction: row-reverse;
-    align-items: flex-end;
-    
 }
 
-.content-left .con-text, .content-right .con-text {
-    text-align: justify;
-    max-width: 45%;
-
-}
-
-.con-text, .con-img {
-    max-width: 50%;
+.content-left .con-text, .content-left .con-img, 
+.content-right .con-text, .content-right .con-img {
+    width: 50%;
     padding: 1.5em;
 }
 
-.con-img img{
-    max-width: 100%;
-    padding: 2em 0;
+/* section text formatting */
+.content-left h1, .content-right h1 {
+    line-height: 2.5em;
+    font-size: 28px;
 }
 
-.con-text p{
-    font-size: 16px;
+.content-left h3, .content-right h3 {
+    line-height: 2em;
 }
 
-.shapes-back{
-    display: inline;
+.content-left p, .content-right p {
+    line-height: 1.8em;
+} 
+
+#home-content h1 {
+    font-size: 48px; 
+    line-height: 1.5em;
 }
 
-.shapes-back .shape img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.content-left .con-text {
+    text-align: left;
 }
 
-.shape{
-    max-width: 40%;
+.content-right .con-text {
+    text-align: right;
 }
 
-@media(max-width: 768px){
-    .con-text p{
-        font-size: 64px;
-    }
+/* contact */
+#contact-content .con-text {
+    text-align: center;
 }
+
+#contact-content .con-text a {
+    font-size: 2em;
+    color: var(--font);
+    text-decoration: none;
+    margin: 0.3em;
+}
+
+#contact-content .con-text a:hover {
+    font-size: 2.3em;
+}
+
+/*  FOOTER  */
+footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 1em;
+}
+
 
 
 
