@@ -46,13 +46,11 @@ body {
     color: var(--font);
     display: flex;
     flex-direction: column;
-}
 
-body {
 	background: linear-gradient(-45deg, var(--colorone), var(--colortwo), var(--colorthree), var(--colorfour));
     background-size: 4000% 4000%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: 100%;
 }
 
 @keyframes gradient {
@@ -77,6 +75,21 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.project-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #34335e;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.project-link:hover {
+    background-color: #403f6e;
 }
 
 
@@ -180,7 +193,7 @@ section .content-right {
 
 /* resume embed */
 #resume-content .con-text {
-    width: 60%;
+    width: 70%;
     padding: 1.5em;
 }
 
@@ -190,7 +203,7 @@ section .content-right {
 }
 
 .con-text iframe{
-    min-width: 30rem;
+    min-width: 100%;
     min-height: 30rem;
     border: 1.5px solid var(--background);
 }
