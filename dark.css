@@ -1,0 +1,253 @@
+/* 
+    COLOR PALETTE
+
+    PURPLES
+    
+    BROWN/PURPLE
+    --purple: #592C56;
+    --white: #ffffff;
+    --beige: #F2CBBD;
+    --peach: #BF7C63;
+    --mbrown: #592C22;
+    --dbrown: #261511;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --contrast: #1B8383;
+    --section: #252525;
+    --background: #191919;
+    --accent1: #B1E0E0;
+    --nav: #252525;
+    --footer: #252525;
+    --black: #262626;
+    --font: #ffffff;
+
+    /* gradient */
+    --colorone: rgba(0, 255, 255, 0.1);
+    --colortwo: rgba(0, 255, 179, 0.1);
+    --colorthree: rgba(0, 162, 255, 0.1);
+    --colorfour: rgba(0, 89, 255, 0.1);
+}
+
+
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.9vw;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--font);
+    display: flex;
+    flex-direction: column;
+
+	
+}
+
+/* #background {
+    background: linear-gradient(-45deg, var(--colorone), var(--colortwo), var(--colorthree), var(--colorfour));
+    background-size: 4000% 4000%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
+} */
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.project-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--contrast);
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.project-link:hover {
+    background-color: #146161;
+}
+
+
+
+/*  NAV BAR */
+.nav-bar {
+    background: var(--nav);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 3px 3px 10px 2px #121212;
+}
+
+#name {
+    float: left;
+    font-size: 32px;
+    transform: translateY(35%);
+    padding: 0 24px;
+    color: var(--accent1)
+}
+
+.nav-bar ul {
+    display: flex;
+    padding: 16px 10px;
+    flex-wrap: wrap;
+    float: right;
+}
+
+.nav-bar a {
+    color: var(--contrast);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-bar a:hover {
+    transform:scale(1.1);
+}
+
+/*  JUMPS  */
+.jump {
+    height: 80px;
+}
+
+
+/* AUDIO CONTROLS - https://blog.shahednasser.com/how-to-style-an-audio-element/ */
+
+/*  SECTIONS */
+section {
+    background: var(--section);
+    border-radius: 15px;
+    margin: 40px 240px; 
+    box-shadow: 5px 5px 10px 3px #121212;
+}
+
+section .content-left, section .content-right {
+    display: flex;
+    flex-basis: row nowrap;
+    padding: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+section .content-right {
+    flex-direction: row-reverse;
+}
+
+.content-left .con-text, .content-left .con-img, 
+.content-right .con-text, .content-right .con-img {
+    width: 50%;
+    padding: 24px;
+}
+
+/* section text formatting */
+.content-left h1, .content-right h1 {
+    line-height: 40px;
+    font-size: 36px;
+    padding-bottom: 30px;
+    color: var(--accent1);
+}
+
+.content-left h3, .content-right h3 {
+    line-height: 30px;
+    color: var(--contrast);
+}
+
+.content-left p, .content-right p {
+    line-height: 28px;
+} 
+
+#home-content h1 {
+    font-size: 48px; 
+    line-height: 24px;
+    text-align: center;
+}
+
+.content-left .con-text {
+    text-align: left;
+}
+
+.content-right .con-text {
+    text-align: right;
+}
+
+/* resume embed */
+#resume-content .con-text {
+    width: 70%;
+    padding: 24px;
+}
+
+#resume-content .con-img {
+    width: 40%;
+    padding: 24px;
+}
+
+.con-text iframe{
+    min-width: 100%;
+    min-height: 480px;
+    border: 1.5px solid var(--background);
+}
+
+
+/* contact */
+#contact-content .con-text {
+    text-align: center;
+}
+
+.fa-icon-link {
+    font-size: 32px;
+    color: var(--font);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.fa-icon-link i:hover{
+    transform:scale(1.1);
+}
+
+
+/*  FOOTER  */
+footer {
+    background: var(--footer);
+    text-align: center;
+    padding: 16px;
+    font-size: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 10vw;
+    }
+    
+}
+
+
