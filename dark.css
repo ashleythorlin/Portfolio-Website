@@ -14,12 +14,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --contrast: #1B8383;
+    --contrast: #21acac;
+    --seccontrast: #146b6b;
     --section: #252525;
     --background: #191919;
     --accent1: #B1E0E0;
     --nav: #252525;
     --footer: #252525;
+    --footertext: #818181;
     --black: #262626;
     --font: #ffffff;
 
@@ -179,7 +181,16 @@ section .content-right {
 
 .content-left h3, .content-right h3 {
     line-height: 30px;
+    font-size: 20px;
+    padding-top: 10px;
     color: var(--contrast);
+}
+
+.content-left h4, .content-right h4 {
+    font-size: 16px;
+    padding: 6px 0;
+    color: var(--seccontrast);
+    font-weight: 600px;
 }
 
 .content-left p, .content-right p {
@@ -238,14 +249,89 @@ section .content-right {
 /*  FOOTER  */
 footer {
     background: var(--footer);
+    color: var(--footertext);
     text-align: center;
     padding: 16px;
     font-size: 8px;
+    font-weight: 400px;
+    line-height: 30px;
 }
+
+@media screen and (max-width: 1300px) {
+    body{
+        font-size: 15vw;
+    }
+
+    .nav-bar {
+        display: inline;
+    }
+
+    #name {
+        font-size: 2.5em;
+        padding: 0em 1em;
+        margin: 0;
+    }
+
+    .nav-bar a {
+        font-size: 1.3em;
+        padding: 1em 1em;
+
+    }
+
+    section{
+        min-width: 80%;
+        margin: 0 100px auto;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    #home-content h1 {
+        font-size: 6em; 
+        line-height: 1em;
+        text-align: center;
+    }
+    
+}
+
 
 @media screen and (max-width: 768px) {
     body{
         font-size: 10vw;
+    }
+
+    .nav-bar {
+        display: inline;
+    }
+
+    #name {
+        font-size: 2.5em;
+        padding: 0.5em 1em;
+        margin: 0;
+    }
+
+    .nav-bar a {
+        font-size: 1.3em;
+        padding: 1em 1em;
+
+    }
+
+    section{
+        min-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    section p {
+        font-size: 2em;
+    }
+
+    #home-content h1 {
+        font-size: 6em; 
+        line-height: 1em;
+        text-align: center;
     }
     
 }
